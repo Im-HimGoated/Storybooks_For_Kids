@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moonlit Storybooks</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="library" aria-label="Storybook library">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">M</span>
+          <div>
+            <p>Moonlit</p>
+            <strong>Storybooks</strong>
+          </div>
+        </div>
+
+        <section class="book-list" aria-label="Choose a story">
+          <button class="book-card active" type="button" data-story="willow">
+            <span class="cover cover-forest" aria-hidden="true"></span>
+            <span>
+              <strong>Willow & the Lost Star</strong>
+              <small>Kindness, counting, forest friends</small>
+            </span>
+          </button>
+          <button class="book-card" type="button" data-story="cloud">
+            <span class="cover cover-cloud" aria-hidden="true"></span>
+            <span>
+              <strong>Pip's Cloud Kitchen</strong>
+              <small>Shapes, sharing, sky snacks</small>
+            </span>
+          </button>
+          <button class="book-card" type="button" data-story="reef">
+            <span class="cover cover-reef" aria-hidden="true"></span>
+            <span>
+              <strong>The Lantern Reef</strong>
+              <small>Patterns, courage, ocean lights</small>
+            </span>
+          </button>
+        </section>
+
+        <section class="reader-stats" aria-label="Reading rewards">
+          <div>
+            <span class="stat-value" id="starsEarned">2</span>
+            <span class="stat-label">stars</span>
+          </div>
+          <div>
+            <span class="stat-value" id="stickersEarned">1</span>
+            <span class="stat-label">stickers</span>
+          </div>
+          <div class="sticker-tray" id="stickerTray" aria-label="Collected stickers">
+            <span title="Leaf helper">L</span>
+          </div>
+        </section>
+      </aside>
+
+      <section class="reader" aria-label="Interactive story reader">
+        <header class="reader-top">
+          <div>
+            <p class="kicker">Interactive read-along</p>
+            <h1 id="storyTitle">Willow & the Lost Star</h1>
+          </div>
+          <div class="top-actions" aria-label="Reader controls">
+            <button class="icon-button" type="button" id="readButton" aria-label="Read this page aloud">
+              <span aria-hidden="true">▶</span>
+            </button>
+            <button class="icon-button" type="button" id="sparkButton" aria-label="Find a hidden sparkle">
+              <span aria-hidden="true">✦</span>
+            </button>
+          </div>
+        </header>
+
+        <div class="progress-wrap" aria-label="Book progress">
+          <div class="progress-track">
+            <span id="progressBar"></span>
+          </div>
+          <span id="progressText">Page 1 of 4</span>
+        </div>
+
+        <article class="storybook" id="storybook">
+          <div class="page-art" id="pageArt" aria-label="Animated story picture">
+            <div class="sky">
+              <span class="moon"></span>
+              <span class="star star-one"></span>
+              <span class="star star-two"></span>
+              <span class="star star-three"></span>
+            </div>
+            <button class="hotspot owl" type="button" data-clue="The sleepy owl whispers, 'Try counting the silver leaves.'">
+              <span class="sr-only">Owl clue</span>
+            </button>
+            <button class="hotspot leaf" type="button" data-clue="A glowing leaf wiggles. It wants to become a sticker.">
+              <span class="sr-only">Glowing leaf</span>
+            </button>
+            <button class="hotspot door" type="button" data-clue="The tiny door hums when brave readers tap it.">
+              <span class="sr-only">Tiny door</span>
+            </button>
+            <div class="hill"></div>
+            <div class="tree tree-left"></div>
+            <div class="tree tree-right"></div>
+            <div class="character willow">
+              <span class="face"></span>
+              <span class="body"></span>
+              <span class="scarf"></span>
+            </div>
+            <div class="fireflies" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="page-copy">
+            <p id="storyText"></p>
+            <div class="clue-box" id="clueBox" aria-live="polite">
+              Tap the picture to discover tiny story secrets.
+            </div>
+          </div>
+        </article>
+
+        <section class="activity-panel" aria-label="Story activity">
+          <div class="choice-card">
+            <h2 id="activityTitle">Help Willow choose</h2>
+            <p id="activityPrompt">Which path should Willow try first?</p>
+            <div class="choices" id="choices"></div>
+          </div>
+
+          <div class="mini-game">
+            <div>
+              <h2>Star Pattern</h2>
+              <p>Tap the shapes in the story order.</p>
+            </div>
+            <div class="pattern-row" id="patternRow" aria-label="Pattern game"></div>
+          </div>
+        </section>
+
+        <footer class="page-nav" aria-label="Page navigation">
+          <button type="button" id="prevPage">Back</button>
+          <button type="button" id="nextPage">Next Page</button>
+        </footer>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
