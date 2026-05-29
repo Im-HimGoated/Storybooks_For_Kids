@@ -346,6 +346,172 @@ h2 {
   background: linear-gradient(#8ac5d7 0 54%, #95cc86 54%);
 }
 
+.page-art::before,
+.page-art::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+}
+
+.scene-willow {
+  background: linear-gradient(#5677a8 0 54%, #7fba72 54%);
+}
+
+.scene-willow::before {
+  left: 8%;
+  right: 12%;
+  bottom: 104px;
+  height: 24px;
+  border-radius: 999px;
+  background: rgba(255, 241, 168, 0.42);
+  box-shadow: 90px -88px 0 -7px rgba(255, 241, 168, 0.42), 240px -38px 0 -9px rgba(255, 241, 168, 0.42);
+}
+
+.scene-cloud {
+  background: linear-gradient(#9fdbf4 0 68%, #f9d895 68%);
+}
+
+.scene-cloud::before {
+  left: 9%;
+  top: 70px;
+  width: 160px;
+  height: 58px;
+  border-radius: 999px;
+  background: white;
+  box-shadow: 190px 34px 0 -8px rgba(255, 255, 255, 0.9), 330px -12px 0 -18px rgba(255, 255, 255, 0.8);
+}
+
+.scene-cloud::after {
+  left: 36%;
+  bottom: 84px;
+  width: 105px;
+  height: 28px;
+  border-radius: 999px;
+  background: #f7a95d;
+  box-shadow: 12px 16px 0 -6px #fff1d0, -24px -12px 0 -9px #fff1d0;
+}
+
+.scene-cloud .hill {
+  background: #e9bd72;
+}
+
+.scene-cloud .tree {
+  display: none;
+}
+
+.scene-cloud .moon {
+  top: 64px;
+  right: 68px;
+  background: #fff5c7;
+}
+
+.scene-cloud .star {
+  background: #f07963;
+}
+
+.scene-cloud .body {
+  background: #6fa8dc;
+}
+
+.scene-cloud .scarf {
+  background: #ffc857;
+}
+
+.scene-reef {
+  background: linear-gradient(#42b7c4 0 36%, #24628f 36% 76%, #16395c 76%);
+}
+
+.scene-reef::before {
+  left: 6%;
+  right: 6%;
+  top: 54%;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(168, 219, 193, 0.45);
+  box-shadow: 130px -72px 0 -17px rgba(255, 211, 109, 0.48), 290px -26px 0 -12px rgba(188, 167, 232, 0.45);
+}
+
+.scene-reef::after {
+  left: 9%;
+  bottom: 28px;
+  width: 28px;
+  height: 96px;
+  border-radius: 999px 999px 0 0;
+  background: #f07963;
+  box-shadow: 58px 22px 0 -8px #ffc857, 112px -18px 0 -7px #a8dbc1, 360px 8px 0 -4px #bca7e8;
+}
+
+.scene-reef .hill {
+  background: #244d74;
+}
+
+.scene-reef .tree {
+  display: none;
+}
+
+.scene-reef .moon {
+  top: 86px;
+  right: 58px;
+  width: 48px;
+  height: 48px;
+  background: #ffd36d;
+}
+
+.scene-reef .star {
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.82);
+  clip-path: none;
+}
+
+.scene-reef .body {
+  background: #ffcf70;
+}
+
+.scene-reef .scarf {
+  background: #bca7e8;
+}
+
+.scene-page-1 .character {
+  left: 45%;
+}
+
+.scene-page-2 .character {
+  left: 58%;
+}
+
+.scene-page-2 .moon {
+  transform: scale(0.78);
+}
+
+.scene-page-2 .hotspot.door {
+  background: rgba(255, 200, 87, 0.32);
+}
+
+.scene-page-3 .character {
+  left: 35%;
+}
+
+.scene-page-3 .hill {
+  height: 142px;
+}
+
+.scene-page-3 .hotspot.leaf {
+  top: 39%;
+}
+
+.scene-page-4 .character {
+  left: 66%;
+}
+
+.scene-page-4 .sky {
+  filter: brightness(1.08);
+}
+
+.scene-page-4 .fireflies span {
+  width: 11px;
+  height: 11px;
+}
+
 .sky,
 .hill,
 .tree,

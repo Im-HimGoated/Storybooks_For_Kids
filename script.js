@@ -123,6 +123,7 @@ let patternIndex = 0;
 let speechTimer;
 
 const storybook = document.querySelector("#storybook");
+const pageArt = document.querySelector("#pageArt");
 const storyTitle = document.querySelector("#storyTitle");
 const storyText = document.querySelector("#storyText");
 const progressBar = document.querySelector("#progressBar");
@@ -143,6 +144,7 @@ function renderStory() {
   const story = stories[currentStoryKey];
   const page = getPage();
   patternIndex = 0;
+  pageArt.className = `page-art scene-${currentStoryKey} scene-page-${currentPage + 1}`;
   storyTitle.textContent = story.title;
   activityPrompt.textContent = page.prompt;
   clueBox.textContent = "Tap the picture to discover tiny story secrets.";
