@@ -10,7 +10,7 @@
     <main class="app-shell">
       <aside class="library" aria-label="Storybook library">
         <div class="brand">
-          <span class="brand-mark" aria-hidden="true">M</span>
+          <span class="brand-mark" aria-hidden="true">☾</span>
           <div>
             <p>Moonlit</p>
             <strong>Storybooks</strong>
@@ -51,7 +51,7 @@
             <span class="stat-label">stickers</span>
           </div>
           <div class="sticker-tray" id="stickerTray" aria-label="Collected stickers">
-            <span title="Leaf helper">L</span>
+            <span title="Leaf helper">Leaf</span>
           </div>
         </section>
       </aside>
@@ -87,15 +87,20 @@
               <span class="star star-two"></span>
               <span class="star star-three"></span>
             </div>
-            <button class="hotspot owl" type="button" data-clue="The sleepy owl whispers, 'Try counting the silver leaves.'">
+            <button class="hotspot owl" type="button">
               <span class="sr-only">Owl clue</span>
             </button>
-            <button class="hotspot leaf" type="button" data-clue="A glowing leaf wiggles. It wants to become a sticker.">
+            <button class="hotspot leaf" type="button">
               <span class="sr-only">Glowing leaf</span>
             </button>
-            <button class="hotspot door" type="button" data-clue="The tiny door hums when brave readers tap it.">
+            <button class="hotspot door" type="button">
               <span class="sr-only">Tiny door</span>
             </button>
+            <div class="page-props" aria-hidden="true">
+              <span class="prop prop-one"></span>
+              <span class="prop prop-two"></span>
+              <span class="prop prop-three"></span>
+            </div>
             <div class="hill"></div>
             <div class="tree tree-left"></div>
             <div class="tree tree-right"></div>
@@ -119,16 +124,17 @@
 
         <section class="activity-panel" aria-label="Story activity">
           <div class="choice-card">
-            <h2 id="activityTitle">Help Willow choose</h2>
+            <h2 id="activityTitle">Help the hero choose</h2>
             <p id="activityPrompt">Which path should Willow try first?</p>
             <div class="choices" id="choices"></div>
           </div>
 
           <div class="mini-game">
             <div>
-              <h2>Star Pattern</h2>
-              <p>Tap the shapes in the story order.</p>
+              <h2 id="patternTitle">Star Pattern</h2>
+              <p id="patternPrompt">Copy the glowing order.</p>
             </div>
+            <div class="pattern-guide" id="patternGuide" aria-label="Pattern to copy"></div>
             <div class="pattern-row" id="patternRow" aria-label="Pattern game"></div>
           </div>
         </section>
